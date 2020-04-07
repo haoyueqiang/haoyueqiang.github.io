@@ -1,5 +1,5 @@
 default:
-  text_skin: default
+  text_skin: dark
   highlight_theme: default
   lang: en
   paths:
