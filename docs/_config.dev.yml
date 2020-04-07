@@ -17,11 +17,11 @@
 ## => Site Settings
 ##全局设置
 ##############################
-text_skin: dark  #"default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+text_skin: default  #"default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : 郝跃强的站点
+title   : #郝跃强的站点
 description: > #使用一些简短的语言来描述你的网站
   
 
