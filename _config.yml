@@ -34,18 +34,18 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ##############################
 author:
   type      : # "person" (default), "organization"
-  name      : 江南一点雨
+  name      : 郝跃强
   url       :
-  avatar    : https://www.javaboy.org/images/sb/javaboy.jpg
-  bio       : I am an amazing person.
-  email     : wangsong0210@gmail.com
-  zhihu     : wang-song-9 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  github    : lenve # "user_name" the last part of your profile url, e.g. https://github.com/user_name
+  #avatar    : https://www.javaboy.org/images/sb/javaboy.jpg
+  #bio       : I am an amazing person.
+  #email     : wangsong0210@gmail.com
+  #zhihu     : wang-song-9 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
+  github    : lenve # "user_name" the last part of your profile url, e.g. https://github.com/haoyueqiang
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
-repository: javaboy666/javaboy666.github.io
+repository: haoyueqiang.github.io
 repository_tree: master
 
 
