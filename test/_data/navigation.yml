@@ -40,7 +40,7 @@ header:
       zh-HK   : *ZH_HANT
       ko      : &KO       소개
       ko-KR   : *KO
-      fr      : &FR       À propos
+      fr      : &KO       À propos
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
