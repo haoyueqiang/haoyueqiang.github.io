@@ -20,7 +20,7 @@ text_skin: chocolate # "default" (default), "dark", "forest", "ocean", "chocolat
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : http://javaboy666.github.io
 baseurl : # does not include hostname
-title   : 郝跃强
+title   : 郝跃强的站点
 description: 电子书示例网站，关注微信公众号：郝跃强2 ，回复 2TB 获取超 2TB 免费 Java 教程。
 
 
