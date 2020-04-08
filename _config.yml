@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : http://javaboy666.github.io
+url     : https://haoyueqiang.github.io/
 baseurl : # does not include hostname
 title   : 郝跃强
 description: 电子书示例网站，关注微信公众号：郝跃强2 ，回复 2TB 获取超 2TB 免费 Java 教程。
@@ -33,12 +33,12 @@ timezone: # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones for
 ## => Author and Social
 ##############################
 author:
-  type      : # "person" (default), "organization"
+  type      : person # "person" (default), "organization"
   name      : 郝跃强
-  url       :
-  #avatar    : https://www.javaboy.org/images/sb/javaboy.jpg
+  url       : https://blog.csdn.net/qq_35361115
+  avatar    : https://haoyueqiang.github.io/image/haoyueqiang.jpg
   #bio       : I am an amazing person.
-  #email     : wangsong0210@gmail.com
+  email     : 17301744398
   #zhihu     : wang-song-9 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
   github    : haoyueqiang # "user_name" the last part of your profile url, e.g. https://github.com/haoyueqiang
 
