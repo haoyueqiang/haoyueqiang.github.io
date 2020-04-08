@@ -6,13 +6,15 @@ titles:
 key: page-about
 ---
 
-TeXt is a super customizable Jekyll theme for personal site, team site, blog, project, documentation, etc. Similar to iOS 11 style, it has large and prominent titles, round buttons and cards.
+一个Java开发小白的自我成长之路
+
 
 ```javascript
 (() => console.log('Hello, World!'))();
 ```
 
 一个程序小白的成长之路
+![RUNOOB 图标](https://haoyueqiang.github.io/screenshot.jpg)
 
 ## Features
 
