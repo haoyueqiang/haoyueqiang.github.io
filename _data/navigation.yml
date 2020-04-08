@@ -1,4 +1,6 @@
 header:
+  - title: Docs
+    url: /docs/en/
   - titles:
       # @start locale config
       en      : &EN       Archive
