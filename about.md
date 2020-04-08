@@ -9,8 +9,8 @@ key: page-about
 一个Java开发小白的自我成长之路
 
 
-```javascript
-(() => console.log('Hello, World!'))();
+```java
+System.out.pritln('Hello, World!');
 ```
 
 一个程序小白的成长之路
