@@ -35,7 +35,7 @@ header:
       en      : &EN       Mysql
       zh-Hans : &ZH_HANS  Mysql
       zh-Hant : &ZH_HANT  Mysql
-    url: /mysql.html
+    url: /mySql.html
   - titles:
       en      : &EN       Docker
       zh-Hans : &ZH_HANS  Docker
