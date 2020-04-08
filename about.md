@@ -8,7 +8,6 @@ key: page-about
 
 一个开发者的自我修炼之路
 
-
 ```java
 System.out.pritln('Hello, World!');
 ```
