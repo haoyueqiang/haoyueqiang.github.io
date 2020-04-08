@@ -6,14 +6,14 @@ titles:
 key: page-about
 ---
 
-一个Java开发小白的自我成长之路
+一个开发者的自我修炼之路
 
 
 ```java
 System.out.pritln('Hello, World!');
 ```
 
-一个程序小白的成长之路
+
 ![RUNOOB 图标](https://haoyueqiang.github.io/screenshot.jpg)
 
 ## Features
