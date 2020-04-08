@@ -12,6 +12,8 @@ TeXt is a super customizable Jekyll theme for personal site, team site, blog, pr
 (() => console.log('Hello, World!'))();
 ```
 
+一个程序小白的成长之路
+
 ## Features
 
 ## Skins
