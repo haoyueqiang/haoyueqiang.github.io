@@ -47,7 +47,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /archive.html
+    url: /archive1.html
 
   - titles:
       # @start locale config
@@ -72,7 +72,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /archive.html
+    url: /archive2.html
 
   - titles:
       # @start locale config
@@ -97,7 +97,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /archive.html
+    url: /archive3.html
 
 #---test
 
