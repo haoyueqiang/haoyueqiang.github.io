@@ -40,7 +40,7 @@ author:
   #bio       : I am an amazing person.
   #email     : wangsong0210@gmail.com
   #zhihu     : wang-song-9 # "user_name" the last part of your profile url, e.g. https://www.zhihu.com/people/user_name
-  github    : lenve # "user_name" the last part of your profile url, e.g. https://github.com/haoyueqiang
+  github    : haoyueqiang # "user_name" the last part of your profile url, e.g. https://github.com/haoyueqiang
 
 
 ## => GitHub Repository (if the site is hosted by GitHub)
