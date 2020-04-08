@@ -1,42 +1,23 @@
 header:
   - titles:
-      en      : &EN       郝跃强
-      zh-Hans : &ZH_HANS  郝跃强
+      zh      : &EN       郝跃强
+    url: /archive.html
+    
+  - titles:
+      zh      : &EN       郝跃强
     url: /archive.html
 
   - titles:
-      en      : &EN       About1
-      zh-Hans : &ZH_HANS  关于1
-    url: /about.html
-  - titles:
-      en      : &EN       About2
-      zh-Hans : &ZH_HANS  关于3
-    url: /about.html
-  - titles:
-      en      : &EN       About3
-      zh-Hans : &ZH_HANS  关于3
-    url: /about.html
-  - titles:
-      en      : &EN       About4
-      zh-Hans : &ZH_HANS  关于4
-    url: /about.html
-  - titles:
-      en      : &EN       About5
-      zh-Hans : &ZH_HANS  关于5
-    url: /about.html
-  - titles:
-      en      : &EN       About6
-      zh-Hans : &ZH_HANS  关于6
-    url: /about.html
-  - titles:
-      en      : &EN       About7
-      zh-Hans : &ZH_HANS  关于7
-    url: /about.html
-  - titles:
-      en      : &EN       About8
-      zh-Hans : &ZH_HANS  关于8
-    url: /about.html
+      zh      : &EN       郝跃强
+    url: /archive.html
     
+  - titles:
+      zh      : &EN       关于
+    url: /about.html
+
+    
+
+
 docs-zh:
   - title:      导航示例
     children:
