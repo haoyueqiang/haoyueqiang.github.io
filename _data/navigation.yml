@@ -27,11 +27,6 @@ header:
       zh-Hant : &ZH_HANT  SpringBoot
     url: /springBoot.html
   - titles:
-      en      : &EN       Maven
-      zh-Hans : &ZH_HANS  Maven
-      zh-Hant : &ZH_HANT  Maven
-    url: /maven.html
-  - titles:
       en      : &EN       MongoDB
       zh-Hans : &ZH_HANS  MongoDB
       zh-Hant : &ZH_HANT  MongoDB
