@@ -1,3 +1,35 @@
+# 基础配置
+title: 郝跃强的技术博客
+description: >- # 站点描述，会显示在页脚和SEO中
+  Java后端开发 | 专注于支付系统与AI工程化」
+baseurl: "" # 个人站点必须为空，项目站点才需要填子路径
+url: "https://haoyueqiang.github.io" # 你的GitHub Pages域名
+
+# 主题配置（使用minima主题，GitHub Pages默认支持）
 theme: minima
-title: 郝跃强
-description: 郝跃强的技术博客
+
+#  minima 主题专属配置
+minima:
+  skin: auto # 可选 auto / dark / light，自动切换明暗模式
+  social_links:
+    - { platform: github, user_url: "https://github.com/haoyueqiang" }
+
+# 导航栏配置（顶部菜单）
+header_pages:
+  - about.md # 关于我页面
+  - posts.md # 文章列表页面（可选）
+  - projects.md # 项目展示页面（可选）
+
+# 构建配置（Jekyll相关，一般不用改）
+markdown: kramdown
+highlighter: rouge
+permalink: /:year/:month/:day/:title/ # 文章URL格式
+paginate: 5 # 每页显示5篇文章
+
+# 排除不需要构建的文件
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - README.md
