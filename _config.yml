@@ -32,4 +32,3 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor/bundle/
-  - index.md
