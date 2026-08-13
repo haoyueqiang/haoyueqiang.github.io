@@ -1,7 +1,7 @@
 ---
 title: "Spring Boot + Redis 缓存实践：解决热点查询与缓存击穿"
 description: "以商品详情接口为例，记录从本地数据库直查到 Redis 缓存、互斥重建和空值保护的完整实现过程。"
-date: 2026-08-13 14:30:00 +0800
+date: 2026-08-13 11:30:00 +0800
 category: Java
 stack: Spring Boot
 tags: [Spring Boot, Redis, 缓存, MySQL, 性能优化]
