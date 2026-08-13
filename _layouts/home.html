@@ -1,0 +1,81 @@
+---
+layout: default
+---
+<section class="hero content-width">
+  <div class="hero-copy reveal">
+    <p class="eyebrow"><span class="status-dot"></span> 持续记录 · 持续验证</p>
+    <h1>把复杂技术，<br><em>拆成可复用的答案。</em></h1>
+    <p class="hero-lede">这里沉淀 Java 后端、Python、前端与工程实践笔记。每篇内容都尽量回答一个明确问题，并留下可执行的路径。</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#notes">开始阅读 <span aria-hidden="true">↘</span></a>
+      <a class="button ghost" href="{{ '/archive/' | relative_url }}">按日期归档</a>
+    </div>
+  </div>
+  <aside class="hero-console reveal" aria-label="博客内容概览">
+    <div class="console-bar"><span></span><span></span><span></span><code>~/knowledge-base</code></div>
+    <div class="console-body">
+      <p><span class="prompt">$</span> find notes --by stack</p>
+      <div class="tree">
+        <a href="#notes" data-quick-category="后端"><span>├─</span> backend/ <b>API</b></a>
+        <a href="#notes" data-quick-category="Java"><span>├─</span> java/ <b>JVM</b></a>
+        <a href="#notes" data-quick-category="Python"><span>├─</span> python/ <b>PY</b></a>
+        <a href="#notes" data-quick-category="前端"><span>└─</span> frontend/ <b>WEB</b></a>
+      </div>
+      <p class="console-result"><span>✓</span> {{ site.posts | size }} 篇笔记已建立索引</p>
+    </div>
+  </aside>
+</section>
+
+<section class="signal-strip" aria-label="博客特点">
+  <div class="content-width signal-grid">
+    <p><span>01</span><b>问题驱动</b>从真实故障与需求出发</p>
+    <p><span>02</span><b>代码可行</b>记录可验证的实现细节</p>
+    <p><span>03</span><b>长期维护</b>为知识标注版本与时间</p>
+  </div>
+</section>
+
+<section class="notes-section content-width" id="notes">
+  <header class="section-heading reveal">
+    <div><p class="eyebrow">KNOWLEDGE INDEX</p><h2>技术笔记</h2></div>
+    <p>搜索标题或摘要，也可以组合技术方向、标签和发布日期进行筛选。</p>
+  </header>
+
+  <div class="filter-panel reveal" data-filter-panel>
+    <label class="search-field">
+      <span aria-hidden="true">⌕</span>
+      <span class="sr-only">搜索笔记</span>
+      <input type="search" data-filter-search placeholder="搜索标题、摘要或标签…" autocomplete="off">
+      <kbd>/</kbd>
+    </label>
+    <div class="filter-row">
+      <div class="filter-group" role="group" aria-label="按技术方向筛选">
+        <button class="filter-chip active" type="button" data-category="全部">全部</button>
+        {% assign category_list = "后端,Java,Python,前端,工程实践" | split: "," %}
+        {% for category in category_list %}<button class="filter-chip" type="button" data-category="{{ category }}">{{ category }}</button>{% endfor %}
+      </div>
+      <label class="date-field">发布日期 <input type="date" data-filter-date></label>
+      <button class="text-button" type="button" data-filter-reset>重置</button>
+    </div>
+    <div class="tag-filters" role="group" aria-label="按标签筛选">
+      <span>热门标签</span>
+      {% assign tags_sorted = site.tags | sort %}
+      {% for tag in tags_sorted limit: 10 %}<button type="button" data-tag="{{ tag[0] }}">#{{ tag[0] }}</button>{% endfor %}
+    </div>
+  </div>
+
+  <div class="result-meta"><p><strong data-result-count>{{ site.posts | size }}</strong> 篇匹配笔记</p><p data-active-filter>按发布时间倒序</p></div>
+
+  <div class="post-grid" data-post-list>
+    {% for post in site.posts %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+  <div class="empty-state" data-empty-state hidden>
+    <span>∅</span><h3>没有找到匹配的笔记</h3><p>尝试减少筛选条件，或换一个关键词。</p>
+    <button class="button ghost" type="button" data-empty-reset>清除筛选</button>
+  </div>
+</section>
+
+<section class="home-cta content-width reveal">
+  <p class="eyebrow">EXPLORE BY TIME</p>
+  <h2>想看看某段时间<br>我在研究什么？</h2>
+  <a href="{{ '/archive/' | relative_url }}">打开笔记日历 <span aria-hidden="true">→</span></a>
+</section>

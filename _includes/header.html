@@ -1,0 +1,15 @@
+<header class="site-header">
+  <div class="content-width header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="郝跃强技术笔记首页"><span class="brand-mark">H<span>Y</span>Q</span><span class="brand-copy">郝跃强<small>TECH NOTES</small></span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span></span><span></span><span class="sr-only">打开导航</span></button>
+    <nav class="site-nav" id="site-nav" aria-label="主导航">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>首页</a>
+      <a href="{{ '/posts/' | relative_url }}" {% if page.url contains '/posts' or page.layout == 'post' %}aria-current="page"{% endif %}>笔记</a>
+      <a href="{{ '/archive/' | relative_url }}" {% if page.url contains '/archive' %}aria-current="page"{% endif %}>归档</a>
+      <a href="{{ '/tags/' | relative_url }}" {% if page.url contains '/tags' %}aria-current="page"{% endif %}>标签</a>
+      <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>关于</a>
+      <a class="github-link" href="https://github.com/{{ site.author.github }}" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>
+

@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<article class="post-page">
+  <header class="post-hero content-width reveal">
+    <nav class="breadcrumbs" aria-label="面包屑"><a href="{{ '/' | relative_url }}">首页</a><span>/</span><a href="{{ '/posts/' | relative_url }}">技术笔记</a><span>/</span><b>{{ page.category | default: page.categories[0] }}</b></nav>
+    <p class="eyebrow">{{ page.category | default: page.categories[0] }}{% if page.stack %} · {{ page.stack }}{% endif %}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="post-deck">{{ page.description }}</p>{% endif %}
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</time>
+      <span>·</span><span>{% assign words = content | strip_html | size %}约 {{ words | divided_by: 450 | plus: 1 }} 分钟阅读</span>
+      {% if page.updated %}<span>·</span><span>更新于 {{ page.updated }}</span>{% endif %}
+    </div>
+    {% if page.tags %}<div class="post-tags">{% for tag in page.tags %}<a href="{{ '/tags/#' | append: tag | relative_url }}">#{{ tag }}</a>{% endfor %}</div>{% endif %}
+  </header>
+  <div class="article-layout content-width">
+    <aside class="article-rail"><p>本文目录</p><nav data-toc><span>正在生成目录…</span></nav></aside>
+    <div class="prose article-body">{{ content }}</div>
+  </div>
+  <footer class="post-footer content-width">
+    <div><p class="eyebrow">继续阅读</p><h2>沿着知识脉络，读下一篇。</h2></div>
+    <div class="post-nav">
+      {% if page.previous %}<a href="{{ page.previous.url | relative_url }}"><small>← 较早一篇</small><b>{{ page.previous.title }}</b></a>{% endif %}
+      {% if page.next %}<a href="{{ page.next.url | relative_url }}"><small>较新一篇 →</small><b>{{ page.next.title }}</b></a>{% endif %}
+    </div>
+  </footer>
+</article>
+

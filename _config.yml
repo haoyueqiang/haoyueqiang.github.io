@@ -1,34 +1,35 @@
-# 基础配置
-title: 郝跃强的技术博客
-description: >- # 站点描述，会显示在页脚和SEO中
-  Java后端开发 | 专注于支付系统与AI工程化」
-baseurl: "" # 个人站点必须为空，项目站点才需要填子路径
-url: "https://haoyueqiang.github.io" # 你的GitHub Pages域名
+title: 郝跃强 · 技术笔记
+description: 聚焦 Java 后端、Python、前端与工程实践的个人技术博客。
+url: "https://haoyueqiang.github.io"
+baseurl: ""
+lang: zh-CN
+timezone: Asia/Shanghai
 
-# 主题配置（使用minima主题，GitHub Pages默认支持）
-theme: minima
+author:
+  name: 郝跃强
+  github: haoyueqiang
 
-#  minima 主题专属配置
-minima:
-  skin: auto # 可选 auto / dark / light，自动切换明暗模式
-  social_links:
-    - { platform: github, user_url: "https://github.com/haoyueqiang" }
-
-# 导航栏配置（顶部菜单）
-header_pages:
-  - about.md # 关于我页面
-  - posts.md # 文章列表页面（可选）
-  - projects.md # 项目展示页面（可选）
-
-# 构建配置（Jekyll相关，一般不用改）
 markdown: kramdown
 highlighter: rouge
-permalink: /:year/:month/:day/:title/ # 文章URL格式
-paginate: 5 # 每页显示5篇文章
+permalink: /notes/:year/:month/:day/:title/
+future: false
+show_excerpts: true
 
-# 排除不需要构建的文件
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+    values:
+      layout: page
+
 exclude:
   - Gemfile
   - Gemfile.lock
+  - README.md
+  - vendor
   - node_modules
-  - vendor/bundle/
+

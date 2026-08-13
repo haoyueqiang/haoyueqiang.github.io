@@ -1,0 +1,12 @@
+---
+layout: default
+---
+<article class="page-shell content-width">
+  <header class="page-heading reveal">
+    {% if page.eyebrow %}<p class="eyebrow">{{ page.eyebrow }}</p>{% endif %}
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p>{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="prose reveal">{{ content }}</div>
+</article>
+
