@@ -5,20 +5,20 @@
   const menu=$('.menu-toggle');
   if(menu){menu.addEventListener('click',()=>{const nav=$('#site-nav');const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));});}
 
-  const reveal=()=>{const items=$$('.reveal:not(.visible)');if(!('IntersectionObserver'in window)){items.forEach(x=>x.classList.add('visible'));return}const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');io.unobserve(entry.target)}}),{threshold:.08});items.forEach(x=>io.observe(x));};
-  reveal();
-
   const panel=$('[data-filter-panel]');
   if(panel){
-    const cards=$$('[data-post-card]'),search=$('[data-filter-search]'),date=$('[data-filter-date]');
+    const cards=$$('[data-post-card]'),search=$('[data-filter-search]'),date=$('[data-filter-date]'),postList=$('[data-post-list]');
     let category='全部',tag='';
     const normalize=s=>(s||'').toLowerCase().trim();
-    const apply=()=>{let count=0;cards.forEach(card=>{const query=normalize(search.value);const hay=normalize([card.dataset.title,card.dataset.category,card.dataset.tags].join(' '));const show=(!query||hay.includes(query))&&(category==='全部'||normalize(card.dataset.category).includes(normalize(category)))&&(!tag||normalize(card.dataset.tags).split(',').includes(normalize(tag)))&&(!date.value||card.dataset.date===date.value);card.hidden=!show;if(show)count++;});$('[data-result-count]').textContent=count;$('[data-empty-state]').hidden=count!==0;const active=[];if(category!=='全部')active.push(category);if(tag)active.push('#'+tag);if(date.value)active.push(date.value);$('[data-active-filter]').textContent=active.length?active.join(' · '):'按发布时间倒序';};
+    const apply=()=>{let count=0;cards.forEach(card=>{const query=normalize(search.value);const hay=normalize([card.dataset.title,card.dataset.category,card.dataset.tags].join(' '));const show=(!query||hay.includes(query))&&(category==='全部'||normalize(card.dataset.category).includes(normalize(category)))&&(!tag||normalize(card.dataset.tags).split(',').includes(normalize(tag)))&&(!date.value||card.dataset.date===date.value);card.hidden=!show;if(show)count++;});$('[data-result-count]').textContent=count;$('[data-empty-state]').hidden=count!==0;const active=[];if(category!=='全部')active.push(category);if(tag)active.push(tag);if(date.value)active.push(date.value);$('[data-active-filter]').textContent=active.length?active.join(' / '):'全部笔记';};
     const reset=()=>{category='全部';tag='';search.value='';date.value='';$$('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category==='全部'));$$('[data-tag]').forEach(x=>x.classList.remove('active'));apply();};
+    const setView=view=>{const selected=view==='grid'?'grid':'list';postList.classList.toggle('view-grid',selected==='grid');postList.classList.toggle('view-list',selected==='list');$$('[data-view]').forEach(btn=>{const active=btn.dataset.view===selected;btn.classList.toggle('active',active);btn.setAttribute('aria-pressed',String(active));});try{localStorage.setItem('notes-view',selected)}catch(error){}};
     search.addEventListener('input',apply);date.addEventListener('change',apply);$('[data-filter-reset]').addEventListener('click',reset);$('[data-empty-reset]').addEventListener('click',reset);
     $$('[data-category]').forEach(btn=>btn.addEventListener('click',()=>{category=btn.dataset.category;$$('[data-category]').forEach(x=>x.classList.toggle('active',x===btn));apply();}));
     $$('[data-tag]').forEach(btn=>btn.addEventListener('click',()=>{tag=tag===btn.dataset.tag?'':btn.dataset.tag;$$('[data-tag]').forEach(x=>x.classList.toggle('active',x.dataset.tag===tag));apply();}));
     $$('[data-quick-category]').forEach(link=>link.addEventListener('click',()=>{category=link.dataset.quickCategory;$$('[data-category]').forEach(x=>x.classList.toggle('active',x.dataset.category===category));apply();}));
+    $$('[data-view]').forEach(btn=>btn.addEventListener('click',()=>setView(btn.dataset.view)));
+    let savedView='list';try{savedView=localStorage.getItem('notes-view')||'list'}catch(error){}setView(savedView);
     document.addEventListener('keydown',event=>{if(event.key==='/'&&!/input|textarea/i.test(document.activeElement.tagName)){event.preventDefault();search.focus();}});
   }
 

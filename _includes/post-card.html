@@ -1,9 +1,14 @@
 {% assign post_category = include.post.category | default: include.post.categories[0] %}
-<article class="post-card reveal" data-post-card data-title="{{ include.post.title | escape }} {{ include.post.description | escape }}" data-category="{{ post_category }} {{ include.post.stack }}" data-tags="{{ include.post.tags | join: ',' }}" data-date="{{ include.post.date | date: '%Y-%m-%d' }}">
-  <div class="card-top"><span class="stack-badge">{{ post_category | default: '技术' }}</span><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y.%m.%d" }}</time></div>
-  <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
-  <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncate: 110 }}</p>
-  {% if include.post.tags %}<div class="card-tags">{% for tag in include.post.tags limit: 4 %}<span>#{{ tag }}</span>{% endfor %}</div>{% endif %}
-  <a class="card-link" href="{{ include.post.url | relative_url }}" aria-label="阅读《{{ include.post.title }}》">阅读全文 <span>↗</span></a>
+<article class="post-item" data-post-card data-title="{{ include.post.title | escape }} {{ include.post.description | escape }}" data-category="{{ post_category }} {{ include.post.stack }}" data-tags="{{ include.post.tags | join: ',' }}" data-date="{{ include.post.date | date: '%Y-%m-%d' }}">
+  <div class="post-item-meta">
+    <span class="category-label">{{ post_category | default: '技术' }}</span>
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%Y-%m-%d" }}</time>
+  </div>
+  <div class="post-item-content">
+    <h3><a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a></h3>
+    <p>{{ include.post.description | default: include.post.excerpt | strip_html | truncate: 150 }}</p>
+    {% if include.post.tags %}<div class="post-item-tags"><span>标签</span>{% for tag in include.post.tags limit: 5 %}<a href="{{ '/tags/#' | append: tag | relative_url }}">{{ tag }}</a>{% endfor %}</div>{% endif %}
+  </div>
+  <a class="post-item-link" href="{{ include.post.url | relative_url }}" aria-label="阅读《{{ include.post.title }}》">阅读全文</a>
 </article>
 
