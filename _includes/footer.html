@@ -1,7 +1,12 @@
 <footer class="site-footer">
   <div class="content-width footer-inner">
     <p>© {{ 'now' | date: '%Y' }} 郝跃强的技术博客</p>
-    <nav><a href="{{ '/posts/' | relative_url }}">全部笔记</a><a href="{{ '/archive/' | relative_url }}">归档</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a><a href="https://github.com/{{ site.author.github }}">GitHub</a></nav>
+    <nav>
+      <a href="{{ '/posts/' | relative_url }}">全部笔记</a>
+      <a href="{{ '/archive/' | relative_url }}">归档</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      <a href="https://github.com/{{ site.author.github }}">GitHub</a>
+    </nav>
     <p>基于 Markdown 与 Jekyll 构建</p>
   </div>
 </footer>

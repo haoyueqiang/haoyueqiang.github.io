@@ -2,7 +2,7 @@
 title: 关于我
 permalink: /about/
 eyebrow: ABOUT HAOYUEQIANG
-description: 一名持续学习、重视工程质量的开发者。
+description: 一名持续学习的开发者。
 ---
 
 ## 你好，我是郝跃强
